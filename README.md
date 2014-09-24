@@ -56,7 +56,7 @@ Workshop:
 
 Ideen sammlen, Themen Clustern, Studenten nach Interessen Verteilen.  
 
-- Obejkterkennung mit CV ohne Marker  
+- Objekterkennung mit CV ohne Marker  
 - Körper vor dem Tisch  
 - Kommunikation zwischen Leuten am Tisch
 - Touch um eine oder mehrere Komponenten erweitern zB Farberkennung Bsp DIY Musical Interface mit Farben (Formen waren egal)  
