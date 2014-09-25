@@ -41,7 +41,7 @@ In this sketch we use a LED on pin 12. Protect that LED with an 220Ohm resistor.
 - Connect the resistor to the long leg (anode) of the LED.
 - Connect the short leg (catode) back to the ground.  
 - Upload the sketch [capacitive_digital.ino](/arduino/capacitive_digital/capacitive_digital.ino) to your board and touch the paperclip or foil.  
-- 
+
 
 
 
