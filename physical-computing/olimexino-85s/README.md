@@ -7,7 +7,15 @@ See the [pin layout here](https://www.olimex.com/Products/Duino/AVR/OLIMEXINO-85
 
 Download the costum [Arduino IDE here](http://digistump.com/wiki/digispark/tutorials/connecting) and get the [examples here](https://www.olimex.com/Products/Duino/AVR/OLIMEXINO-85-ASM/resources/ATtiny85_demos.zip)  
 
+This is the pinout for the olimexino. Taken from their site.  
+
 ![](OLIMEXINO-85s_pinout.jpg)
+
+###Knock  
+
+Hook up a piezo at analog pin 1 (it has in the pinout the number two) and knock on yout table to get some results.
+
+![](knock_hookup.jpg)  
 
 ##License
 
