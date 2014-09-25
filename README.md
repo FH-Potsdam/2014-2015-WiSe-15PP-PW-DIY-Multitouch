@@ -74,3 +74,20 @@ Ideen sammlen, Themen Clustern, Studenten nach Interessen Verteilen.
 - Physical computing, Kapazitive Sensoren, Piezo Sensoren,  
 - CV System mit Beamer und Kamera Blob detection (Advanced Setup)
 
+
+##Libraries List:
+
+### Processing Libs & Docs
+
+- [Processing Libs Directory](http://processing.org/reference/libraries/)
+- [Processing Video Lib](http://processing.org/reference/libraries/video/index.html)
+- [Camera Input Example](http://www.processing.org/reference/libraries/video/Capture.html)
+
+### Computer Vision / Blob Detection
+
+- [OpenCV for Processing](https://github.com/atduskgreg/opencv-processing): Processing Computer Vision library and examples. This includes, brightness and contrast operations, image filtering, contour and edges detection, marker detection, background substraction and more CV operations.
+- [BlobDetection](http://www.v3ga.net/processing/BlobDetection/): Blob detection lib for Processing (Last updated Oct. 2012)
+- [Blobscanner](https://sites.google.com/site/blobscanner/home/): Blob detection lib for Processing
+
+
+
