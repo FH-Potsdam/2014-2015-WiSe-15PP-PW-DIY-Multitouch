@@ -1,6 +1,6 @@
 /**
- * Image Processing
- * This sketch does some image filtering to prepare the image for blob segmentation
+ * Image Calibration
+ * This sketch will help us to calibrate the filter values to optimize tracking
  *
  * It uses the OpenCV for Processing library by Greg Borenstein
  * https://github.com/atduskgreg/opencv-processing
@@ -14,6 +14,7 @@
 import gab.opencv.*;
 import java.awt.Rectangle;
 import processing.video.*;
+import controlP5.*;
 
 OpenCV opencv;
 Capture video;
@@ -26,8 +27,13 @@ int threshold = 75;
 boolean useAdaptiveThreshold = false; // use basic thresholding
 int thresholdBlockSize = 489;
 int thresholdConstant = 45;
-int blurSize = 4;
 int blobSizeThreshold = 20;
+int blurSize = 4;
+
+// Control vars
+ControlP5 cp5;
+int buttonColor;
+int buttonBgColor;
 
 void setup() {
   frameRate(15);
@@ -39,7 +45,14 @@ void setup() {
   opencv = new OpenCV(this, 640, 480);
   contours = new ArrayList<Contour>();
   
-  size(opencv.width, opencv.height, P2D);
+  size(opencv.width + 200, opencv.height, P2D);
+  
+  // Init Controls
+  cp5 = new ControlP5(this);
+  initControls();
+  
+  // Set thresholding
+  toggleAdaptiveThreshold(useAdaptiveThreshold);
 }
 
 void draw() {
@@ -112,9 +125,12 @@ void draw() {
   contoursImage = opencv.getSnapshot();
   
   // Draw
+  pushMatrix();
+  translate(width-src.width, 0);
   displayImages();
   //displayContours();
   displayContoursBoundingBoxes();
+  popMatrix();
 }
 
 void displayImages() {
@@ -122,9 +138,9 @@ void displayImages() {
   pushMatrix();
   scale(0.5);
   image(src, 0, 0);
-  image(preProcessedImage, width, 0);
-  image(processedImage, 0, height);
-  image(src, width, height);
+  image(preProcessedImage, src.width, 0);
+  image(processedImage, 0, src.height);
+  image(src, src.width, src.height);
   popMatrix();
   
   stroke(255);
@@ -139,7 +155,7 @@ void displayContours() {
     
   pushMatrix();
   scale(0.5);
-  translate(width, height);
+  translate(src.width, src.height);
   
   noFill();
   strokeWeight(3);
@@ -148,7 +164,7 @@ void displayContours() {
   for (int i=0; i<contours.size(); i++) {
   
     Contour contour = contours.get(i);
-
+    
     noFill();
     stroke(0, 255, 0);
     strokeWeight(3);
@@ -161,7 +177,7 @@ void displayContoursBoundingBoxes() {
   
   pushMatrix();
   scale(0.5);
-  translate(width, height);
+  translate(src.width, src.height);
   
   noFill();
   strokeWeight(3);
@@ -183,4 +199,100 @@ void displayContoursBoundingBoxes() {
   popMatrix();
 }
 
+//////////////////////////
+// CONTROL P5 Functions
+//////////////////////////
+
+void initControls() {
+  // Slider for contrast
+  cp5.addSlider("contrast")
+     .setLabel("contrast")
+     .setPosition(20,50)
+     .setRange(0.0,6.0)
+     ;
+     
+  // Slider for threshold
+  cp5.addSlider("threshold")
+     .setLabel("threshold")
+     .setPosition(20,110)
+     .setRange(0,255)
+     ;
+  
+  // Toggle to activae adaptive threshold
+  cp5.addToggle("toggleAdaptiveThreshold")
+     .setLabel("use adaptive threshold")
+     .setSize(10,10)
+     .setPosition(20,144)
+     ;
+     
+  // Slider for adaptive threshold block size
+  cp5.addSlider("thresholdBlockSize")
+     .setLabel("a.t. block size")
+     .setPosition(20,180)
+     .setRange(1,700)
+     ;
+     
+  // Slider for adaptive threshold constant
+  cp5.addSlider("thresholdConstant")
+     .setLabel("a.t. constant")
+     .setPosition(20,200)
+     .setRange(-100,100)
+     ;
+  
+  // Slider for blur size
+  cp5.addSlider("blurSize")
+     .setLabel("blur size")
+     .setPosition(20,260)
+     .setRange(1,20)
+     ;
+     
+  // Slider for minimum blob size
+  cp5.addSlider("blobSizeThreshold")
+     .setLabel("min blob size")
+     .setPosition(20,290)
+     .setRange(0,60)
+     ;
+     
+  // Store the default background color, we gonna need it later
+  buttonColor = cp5.getController("contrast").getColor().getForeground();
+  buttonBgColor = cp5.getController("contrast").getColor().getBackground();
+}
+
+void toggleAdaptiveThreshold(boolean theFlag) {
+  
+  useAdaptiveThreshold = theFlag;
+  
+  if (useAdaptiveThreshold) {
+    
+    // Lock basic threshold
+    setLock(cp5.getController("threshold"), true);
+       
+    // Unlock adaptive threshold
+    setLock(cp5.getController("thresholdBlockSize"), false);
+    setLock(cp5.getController("thresholdConstant"), false);
+       
+  } else {
+    
+    // Unlock basic threshold
+    setLock(cp5.getController("threshold"), false);
+       
+    // Lock adaptive threshold
+    setLock(cp5.getController("thresholdBlockSize"), true);
+    setLock(cp5.getController("thresholdConstant"), true);
+  }
+}
+
+void setLock(Controller theController, boolean theValue) {
+  
+  theController.setLock(theValue);
+  
+  if (theValue) {
+    theController.setColorBackground(color(150,150));
+    theController.setColorForeground(color(100,100));
+  
+  } else {
+    theController.setColorBackground(color(buttonBgColor));
+    theController.setColorForeground(color(buttonColor));
+  }
+}
 
