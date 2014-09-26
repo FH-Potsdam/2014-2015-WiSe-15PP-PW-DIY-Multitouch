@@ -15,7 +15,8 @@ int blobSizeThreshold = 20;
 void setup() {
   frameRate(15);
   
-  video = new Capture(this, 640, 480, "USB2.0 Camera");
+  //video = new Capture(this, 640, 480);
+  video = new Capture(this, 640, 480, "USB2.0 PC CAMERA");
   video.start();
   
   opencv = new OpenCV(this, 640, 480);
@@ -73,7 +74,7 @@ void draw() {
   
   //int c = (int)map(mouseY, 0, height, -100, 100);
   //println("c: " + c);
-  opencv.adaptiveThreshold(489, 45); // 489, 45 - 491, 1
+  //opencv.adaptiveThreshold(489, 45); // 489, 45 - 491, 1
   
   // Filter the image based on threshold - range [0, 255]
   opencv.threshold(threshold);
@@ -81,12 +82,9 @@ void draw() {
   // Invert (black bg, white blobs)
   opencv.invert();
   
-  // Reduce noise - Erode contracts white areas of the image
+  // Reduce noise - Dilate and erode to close holes
+  opencv.dilate();
   opencv.erode();
-  
-  // Dilate and erode to close holes
-  //opencv.dilate();
-  //opencv.erode();
   
   // Blur
   opencv.blur(4);
