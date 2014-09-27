@@ -75,7 +75,7 @@ Ideen sammlen, Themen Clustern, Studenten nach Interessen Verteilen.
 - CV System mit Beamer und Kamera Blob detection (Advanced Setup)
 
 
-##Libraries List:
+##Software:
 
 ### Processing Libs & Docs
 
@@ -89,6 +89,24 @@ Ideen sammlen, Themen Clustern, Studenten nach Interessen Verteilen.
 - [Blobscanner](https://github.com/robdanet/blobscanner): Blob detection lib for Processing
 - [flob](http://s373.net/code/flob/): Alternative to OpenCV. For Processing and openFrameworks
 - [BlobDetection](http://www.v3ga.net/processing/BlobDetection/): Blob detection lib for Processing (Old. Last updated Oct. 2012)
+
+
+##Hardware:
+
+###Cameras
+
+####PS3 Eye Camera
+- Inexpensive - 9€ aprox. Check [here](http://www.amazon.de/dp/B000W3YQ1Y/ref=pe_386171_51767411_TE_M3T1_dp_1)
+- High Resolution/Frame Rate - 320x240 resolution 125fps max, 640x480 resolution 75fps
+- Best camera for building optical MT tracking systems because of its amazing camera sensor and ease of modification.
+
+Source: [http://www.peauproductions.com/cameras.html](http://www.peauproductions.com/cameras.html)
+
+To use the camera with your computer, you will need a driver. You can download it here:
+
+- [Mac OSX: macam driver](http://webcam-osx.sourceforge.net/), and a [hacky solution](http://forum.processing.org/one/topic/ps3-eyecam-under-osx-10-8.html) for Mountain Lion
+- [Windows driver](http://codelaboratories.com/products/eye/driver/)
+
 
 
 
