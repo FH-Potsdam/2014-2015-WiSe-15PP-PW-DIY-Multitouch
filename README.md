@@ -3,87 +3,44 @@
 
 DIY (Multi) Touch (less) Human Computer Interaction (Projektwochen)  
 
-Eine ergebnisoffene Auseinandersetzung mit Touch-, Multitouch-, Cumputervision- und kapazitiven Systemen. Im Vordergrund steht eine effektive aber kostengünstige Umsetzung, die für weitere Projekte portiert werden kann, keine Materialschlacht. Abhängig von der Menge der Teilnehmer wird in Gruppen eine der genannten Technologien recherchiert, erforscht und angewandt. Das Ziel ist eine Ausstellung zum Ende der Projektwochen.  
-
-Ort: LW 126
-Zeit: Erste Woche Montag bis Freitags von 10:00 bis 17:00 Uhr LW 126
-Zeit: Zweite Woche Montag bis Donnerstag von 10:00 bis 17:00 Uhr Home & Foyer
-Zeit: Ausstellung/Präsentation Freitag 17.10. von 11:00 bis 16:00  
-
-##Bereiche:  
-
-- Physical Computing, Arduino, Moderation etc Fabian
-- Touch Box, Camera Hack Juri
-- CV + Sotware Jordi & Fabian
+An open-ended exploration of touch, multitouch, computervision- and capacitive systems. In the foreground is an effective but low-cost implementation that can be ported to other projects, no material battle. Depending on the amount of participants one of the technologies mentioned is researched in groups, prototyped and applied. The aim is an exhibition at the end of the project weeks. 
 
 
-##Ablauf:   
 
-__Tag 1 || Mo 06.10 LW 126:__  
+##Timetable:   
 
-- Vorstellung Juri, Jordi, Fabian  
-- Einführung in Kurs Ziele  
-- History of MT  
-- State of the Art MT  
-- Workshop Ideen generieren Technologie frei  
+__Day 1 || Mo 06.10 LW 126:__  
+
+- Introduction Juri, Jordi, Fabian  
+- Introduction project  
+- Brief and incomplete history of MT  
+- Example MT projects  
+- Form groups
 - Workshop Touch Box  
-- Technischen Stand der Teilnehmenr eruieren
-- Gruppen zusammenstellen
+- excercise
 
-__Tag || 2 - 5 Di 07.10 - Fr 10.10 LW 126:__  
+__Day || 2 - 5 Di 07.10 - Fr 10.10 LW 126:__  
 
-- Entwicklung und Umsetzung vor Ort
+- development and prototyping LW 126
 
-__Tag 6 - 10 || Mo 13.10 - Do 16.10 Home & Foyer:__
+__Day 6 - 10 || Mo 13.10 - Do 16.10 Home & Foyer:__
 
-- Entwicklung und Umsetzung Home und Foyer
+- development and prototyping home and LW corridor
 
-__Tag 10 || Fr. 17.10 Foyer:__
+__Day 10 || Fr. 17.10 Foyer:__
 
-- Ausstellung Installation Foyer  
-
-##Juri says:   
-
-- Touch Interface entwerfen die man auch DIY zuhause bauen kann.  
-- Aktuelle Tech verwenden mit heimischen Objekten
-- Input was gibt es um darauf aufzubauen
-- aktuelle Tech hacken  
-- Workshop starter: Bsp Karton mit Kamera drin und Bilderkennung vom Schatten   
-
-##Jordi says:  
-
-Workshop:  
-
-Ideen sammlen, Themen Clustern, Studenten nach Interessen Verteilen.  
-
-- Objekterkennung mit CV ohne Marker  
-- Körper vor dem Tisch  
-- Kommunikation zwischen Leuten am Tisch
-- Touch um eine oder mehrere Komponenten erweitern zB Farberkennung Bsp DIY Musical Interface mit Farben (Formen waren egal)  
-- Workshop Jordi / GUI freies Interface  
-- Erst Workshop Aufgabe tech frei Ideen generieren, dann sehen ob Teilaspekte oder das Ganze implemeitenrt werden kann.
-- Schnell Use Cases und Anwendungen entwerfen. Nicht nur Technologie erforschen
+- Exhibition 
 
 
-##Fabian says:   
+###Software:
 
-- Workspace öffnen Doddle/Google Fragebogen um Prog Kenntnisse und Vorkenntnisse zu erfragen  
-- Umsetzung mit geringem Kostenaufwand  
-- Raspberry Pi
-- Keine Zellen oder Tische verwenden  
-- Physical computing, Kapazitive Sensoren, Piezo Sensoren,  
-- CV System mit Beamer und Kamera Blob detection (Advanced Setup)
-
-
-##Software:
-
-### Processing Libs & Docs
+#### Processing Libs & Docs
 
 - [Processing Libs Directory](http://processing.org/reference/libraries/)
 - [Processing Video Lib](http://processing.org/reference/libraries/video/index.html)
 - [Camera Input Example](http://www.processing.org/reference/libraries/video/Capture.html)
 
-### Computer Vision / Blob Detection
+#### Computer Vision / Blob Detection
 
 - [OpenCV for Processing](https://github.com/atduskgreg/opencv-processing): Processing Computer Vision library and examples. This includes, brightness and contrast operations, image filtering, contour and edges detection, marker detection, background substraction and more CV operations.
 - [Blobscanner](https://github.com/robdanet/blobscanner): Blob detection lib for Processing
@@ -91,11 +48,11 @@ Ideen sammlen, Themen Clustern, Studenten nach Interessen Verteilen.
 - [BlobDetection](http://www.v3ga.net/processing/BlobDetection/): Blob detection lib for Processing (Old. Last updated Oct. 2012)
 
 
-##Hardware:
+###Hardware:
 
-###Cameras
+####Cameras
 
-####PS3 Eye Camera
+#####PS3 Eye Camera
 - Inexpensive - 9€ aprox. Check [here](http://www.amazon.de/dp/B000W3YQ1Y/ref=pe_386171_51767411_TE_M3T1_dp_1)
 - High Resolution/Frame Rate - 320x240 resolution 125fps max, 640x480 resolution 75fps
 - Best camera for building optical MT tracking systems because of its amazing camera sensor and ease of modification.
@@ -107,6 +64,64 @@ To use the camera with your computer, you will need a driver. You can download i
 - [Mac OSX: macam driver](http://webcam-osx.sourceforge.net/), and a [hacky solution](http://forum.processing.org/one/topic/ps3-eyecam-under-osx-10-8.html) for Mountain Lion
 - [Windows driver](http://codelaboratories.com/products/eye/driver/)
 
+
+###Useful Links   
+Links for things.
+
+####Physical:
+
+- [Knock Sensor Tutorial (Piezo)](http://www.arduino.cc/en/Tutorial/KnockSensor)  
+- [Knock Tutorial (Piezo)](http://arduino.cc/en/Tutorial/Knock)  
+- [Digitalio Capacitiv Paperclip](https://github.com/fabiantheblind/digitalio/tree/master/capacitive_touch_paperclip)  
+- [Paperclip based on this](http://www.instructables.com/id/Turn-a-pencil-drawing-into-a-capacitive-sensor-for/?ALLSTEPS)
+- [CapacitiveSensor Library (ProjectPage)](https://www.pjrc.com/teensy/td_libs_CapacitiveSensor.html)
+- [CapacitiveSensor Library (Github)](https://github.com/PaulStoffregen/CapacitiveSensor)
+- [CapSense Library Demo Video](https://www.youtube.com/watch?v=BHQPqQ_5ulc)
+
+####Optical (Color Tracking / Blob Detection):
+
+- [Tangible Color Music Instrument (oF)](http://www.creativeapplications.net/sound/tangible-color-music-instrument-openframeworks-sound/)
+- [Prototyp von dem vorheringen Projekt](http://www.ryanraffa.com/parsons/thesis/category/prototypes/5-tangible-player/)
+- [Und die Masterarbeit](http://www.ryanraffa.com/parsons/thesis/category/papers/)
+
+- [Scrapple by Golan Levin](http://www.flong.com/projects/scrapple/)
+
+- [Trackmate (MIT)](http://tangible.media.mit.edu/project/trackmate/) is an inexpensive, do-it-yourself tangible tracking system that allows your computer to recognize tagged objects and their corresponding position, rotation, and color information when placed on a surface. Trackmate sends all object data viaLusidOSC (a protocol layer for unique spatial input devices), allowing any LusidOSC-based application to work with the system.
+
+####Capacitive: 
+- [DragDrop – Ein haptisch interaktives Kinderspeil](http://www.designmadeingermany.de/2013/25478/)
+[Capstones, Zebrawidgets & Lumino (Hasso Plattner Institute Potsdam)](http://www.hpi.uni-potsdam.de/baudisch/projects/lumino.html)
+- [CAPSTONES AND ZEBRAWIDGETS](http://stefaniemueller.org/capstones-and-zebrawidgets/)
+
+- [TOUCHÉ (Disney Research)](http://www.disneyresearch.com/project/touche-touch-and-gesture-sensing-for-the-real-world/)
+- [Capacitive Fingerprinting: User Differentiation Through Capacitive Sensing](http://chrisharrison.net/index.php/Research/CapacitiveFingerprinting)
+
+####Augmented Multitouch – Sound
+
+- [Augmenting Touch throught acoustic sensing](http://plopesresearch.levelup.webfactional.com/?project=rich-touch-acoustics)
+- [TapSense – Chris Harrison](http://www.cmu.edu/news/stories/archives/2011/october/oct19_tapsense.html)
+
+####Augmentation – Misc
+
+- [Chris Harrison - The Rich-Touch Revolution is Coming (opening keynote der TEI'14)](http://www.tei-conf.org/14/program/keynote_harrison.php)
+- [About Chris Harrison](http://www.chrisharrison.net/index.php/Research/Welcome)
+- [WorldKit: Ad Hoc Interactive Applications on Everyday Surfaces](http://chrisharrison.net/index.php/Research/WorldKit)
+
+####Sketch-Interaction (Augmented Drawings / Gesten)
+- [SketchSynth](http://www.creativeapplications.net/openframeworks/sketchsynth-drawable-user-interface-by-billy-keyes/)
+- [Drawn by Zach Liebermann](https://www.youtube.com/watch?v=xwkGC-U8cU4)
+- [Scribbling - Development Prototype #1 Jordi Tost](https://vimeo.com/82286680)
+
+####Misc
+- [Jordi Tost "Augmented Multitouch" Pinboard](http://www.pinterest.com/jorditost/augmented-multitouch/)
+
+
+Copyright (c)  2014 FH-Potsdam, Juri Wolf, Jordi Tost, Fabian Morón Zirfas
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software  without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to  permit persons to whom the Software is furnished to do so, subject to the following conditions:  
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A  PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF  CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+
+see also http://www.opensource.org/licenses/mit-license.php
 
 
 
