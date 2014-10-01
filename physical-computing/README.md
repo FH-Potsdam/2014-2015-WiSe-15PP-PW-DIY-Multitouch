@@ -1,7 +1,6 @@
 physical touch (less)
 =====================
 
-
 ##Acoustic Detectection
 
 ###Knock

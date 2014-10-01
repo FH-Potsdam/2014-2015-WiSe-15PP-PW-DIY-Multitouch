@@ -68,6 +68,10 @@ To use the camera with your computer, you will need a driver. You can download i
 ###Useful Links   
 Links for things.
 
+####Camera Hack: 
+
+-[Hack PS3 Eyecam](http://createdigitalmotion.com/2009/08/trick-out-your-ps3-eye-webcam-best-cam-for-vision-augmented-reality/)
+
 ####Physical:
 
 - [Knock Sensor Tutorial (Piezo)](http://www.arduino.cc/en/Tutorial/KnockSensor)  
