@@ -59,9 +59,12 @@ __Day 10 || Fr. 17.10 Foyer:__
 
 Source: [http://www.peauproductions.com/cameras.html](http://www.peauproductions.com/cameras.html)
 
-To use the camera with your computer, you will need a driver. You can download it here:
+We expirenced some issues using the PSEye3 camera with Processing under Mac OSX. Mountain Lion seems not to work at all.  
+- To use the camera with Mac OSX 10.9.4 you need to use Processing 1.5.1 or 2.0.3 which you can [download here](https://code.google.com/p/processing/downloads/list).  
+- Install [Mac OSX: macam driver](http://webcam-osx.sourceforge.net/)  
 
-- [Mac OSX: macam driver](http://webcam-osx.sourceforge.net/), and a [hacky solution](http://forum.processing.org/one/topic/ps3-eyecam-under-osx-10-8.html) for Mountain Lion
+- and a [hacky solution](http://forum.processing.org/one/topic/ps3-eyecam-under-osx-10-8.html) for Mountain Lion (did not work yet).
+- 
 - [Windows driver](http://codelaboratories.com/products/eye/driver/)
 
 
