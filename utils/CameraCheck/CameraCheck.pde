@@ -1,8 +1,11 @@
 /**
- * Simple sketch prints the list of available cameras and initiates a live capture
- * @author: Jordi Tost @jorditost
+ * CameraCheck
+ * Simple sketch that prints the list of available cameras and initiates a live capture
+ * 
+ * Modified by Jordi Tost @jorditost from:
+ * http://www.processing.org/reference/libraries/video/Capture.html
  *
- * Extended from: http://www.processing.org/reference/libraries/video/Capture.html
+ * @updated: 25/09/2014
  */
  
 import processing.video.*;
