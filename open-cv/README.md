@@ -18,8 +18,6 @@ Here we are basically doing the same than with the [bare bones examples](https:/
 
 The following sketches should help us to calibrate the camera for an effective filtering and blob detection.
 
-###ImageCalibration.pde
-
 Code: [ImageCalibration.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/blob/master/open-cv/ImageCalibration/ImageCalibration.pde)
 
 The sketch is using the following filters:
@@ -52,7 +50,7 @@ As a code skeleton you can use [ImageCalibration.pde](https://github.com/FH-Pots
 
 You should see something like this:
 
-![](ImageCalibration/screenshots/screenshot2.png)
+![](ImageProcessing/screenshots/screenshot.png)
 
 ##More
 For more info about OpenCV and more examples visit the plugins GitHub page:
