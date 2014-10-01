@@ -1,6 +1,6 @@
 /**
- * Image Calibration
- * This sketch will help us to calibrate the filter values to optimize tracking
+ * Image Filtering
+ * This sketch will help us to adjust the filter values to optimize blob detection
  *
  * It uses the OpenCV for Processing library by Greg Borenstein
  * https://github.com/atduskgreg/opencv-processing

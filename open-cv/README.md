@@ -1,6 +1,6 @@
 
 Computer Vision with OpenCV
-======
+===========================
 
 Here we are basically doing the same than with the [bare bones examples](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/blob/master/bare-bones-cv) but using an external library for the computer vision operations (image filtering): the [OpenCV library for Processing](https://github.com/atduskgreg/opencv-processing) (by Greg Borenstein).
 
@@ -15,11 +15,11 @@ or download the last release version from [here](https://github.com/atduskgreg/o
 > __Note__: There are also other OpenCV implementations for Processing but I don't recommend them since they are old and have a trickier synthax.
 
 
-##Calibrating the image for blob detection
+##Filtering the image for blob detection
 
-The following sketches should help us to calibrate the camera for an effective filtering and blob detection.
+The following sketch should help us to filter the source image for blob detection. It requires the [controlP5](http://www.sojamo.de/libraries/controlP5/) library.
 
-Code: [ImageCalibration.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/blob/master/open-cv/ImageCalibration/ImageCalibration.pde)
+Code: [ImageFiltering.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/blob/master/open-cv/ImageFiltering/ImageFiltering.pde)
 
 The sketch is using the following filters:
 
@@ -34,12 +34,12 @@ As you will see, it's not much different than retouching an image with Photoshop
 #### Using basic thresholding
 
 Thresholding is one of the most important filtering operations.
-![](ImageCalibration/screenshots/objects_basic_threshold.png)
+![](ImageFiltering/screenshots/objects_basic_threshold.png)
 
 ### Using adaptive thresholding
 Adaptive thresholding is a more advanced option to filter your image. For environments with changing illumination or if you simply get a source image with shadows or irregular illumination, try better this. You can see an example in the next image, where the 
 
-![](ImageCalibration/screenshots/touch_adaptive_threshold.png)
+![](ImageFiltering/screenshots/touch_adaptive_threshold.png)
 
 Just open the sketch and do some tests ;)
 
@@ -47,7 +47,7 @@ Just open the sketch and do some tests ;)
 
 You can then grap your filter values and place them in your own one. 
 
-As a code skeleton you can use [ImageCalibration.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/blob/master/open-cv/ImageProcessing/ImageProcessing.pde). Basically it does the same but it gets the filter values hardcoded.
+As a code skeleton you can use [ImageFiltering.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/blob/master/open-cv/ImageProcessing/ImageProcessing.pde). Basically it does the same but it gets the filter values hardcoded.
 
 You should see something like this:
 
@@ -72,9 +72,9 @@ http://shiffman.net/2011/04/26/opencv-matching-faces-over-time/
 
 
 ##More
-For more info about OpenCV and more examples, visit the plugin's github repository:
+For more info about OpenCV and more examples, visit the librarys's github repository:
 [https://github.com/atduskgreg/opencv-processing](https://github.com/atduskgreg/opencv-processing)
 
-The plugin's author is also working on a book. You can check some more examples and info pages in its repository:
+The plugin's author, Greg Borenstein, is also working on a book. You can check some more examples and doc pages in its repository:
 [https://github.com/atduskgreg/opencv-processing-book](https://github.com/atduskgreg/opencv-processing-book)
 

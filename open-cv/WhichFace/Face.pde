@@ -3,7 +3,7 @@
  * Daniel Shiffman
  * http://shiffman.net/2011/04/26/opencv-matching-faces-over-time/
  *
- * Modified by Jordi Tost
+ * Modified by Jordi Tost (call the constructor specifying an ID)
  * @updated: 01/10/2014
  */
 
