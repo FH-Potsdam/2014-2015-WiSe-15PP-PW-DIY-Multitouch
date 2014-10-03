@@ -1,5 +1,5 @@
-2014-2015-WiSe-15PP-PW-DIY-Moultitouch
-======================================
+2014-2015-WiSe-15PP-PW-DIY-Multitouch
+=====================================
 
 DIY (Multi) Touch (less) Human Computer Interaction (Projektwochen)  
 
