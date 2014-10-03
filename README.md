@@ -72,7 +72,7 @@ Links for things.
 
 ####Camera Hack: 
 
--[Hack PS3 Eyecam](http://createdigitalmotion.com/2009/08/trick-out-your-ps3-eye-webcam-best-cam-for-vision-augmented-reality/)
+- [Hack PS3 Eyecam](http://createdigitalmotion.com/2009/08/trick-out-your-ps3-eye-webcam-best-cam-for-vision-augmented-reality/)  
 
 ####Physical:
 
