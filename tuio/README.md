@@ -39,3 +39,7 @@ Now run the Processing demo and point some IR at the camera. You should have som
 ###reacTIVision
 
 ![](reacTIVison.png)  
+
+### OSCulator & Ableton Live 
+
+You can use [osculator](http://www.osculator.net/) to transform OSC signals into e.g. Midi Notes to control other devices and software e.g. Ableton Live. This setup is tested but not fully documented.  
