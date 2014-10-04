@@ -59,4 +59,12 @@ Based on [CapacitiveSensor playground.arduino.cc](http://playground.arduino.cc/M
 
 __Hint:__
 
-If your board is connected to the computer you __must__ be connected to the charger. If not your results will be unpredictable. When using an external power source you need to connect it to ground. Play with it and see the original tutorial for further infos.
+If your board is connected to the computer you __must__ be connected to the charger. If not your results will be unpredictable. When using an external power source you need to connect it to ground. Play with it and see the original tutorial for further infos.  
+
+
+### Hoover 
+
+![](hoover/hoover-component.png)  
+Thanks to [@pfingstday](https://github.com/pfingstday) for donating a [HOOVER](http://www.hoverlabs.co/#hover) to the Interface Lab. We will see what we can do with it.  
+
+
