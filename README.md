@@ -3,8 +3,9 @@
 
 DIY (Multi) Touch (less) Human Computer Interaction (Projektwochen)  
 
-An open-ended exploration of touch, multitouch, computervision- and capacitive systems. In the foreground is an effective but low-cost implementation that can be ported to other projects, no material battle. Depending on the amount of participants one of the technologies mentioned is researched in groups, prototyped and applied. The aim is an exhibition at the end of the project weeks. 
+An open-ended exploration of touch, multitouch, computervision- and capacitive systems. In the foreground is an effective but low-cost implementation that can be ported to other projects, no material battle. Depending on the amount of participants one of the technologies mentioned is researched in groups, prototyped and applied. The aim is an exhibition at the end of the project weeks.  
 
+- [incom.org workspace](https://incom.org/workspace/5479)
 
 
 ##Timetable:   
