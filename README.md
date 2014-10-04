@@ -38,6 +38,7 @@ __Day 10 || Fr. 17.10 Foyer:__
 
 - [Processing Libs Directory](http://processing.org/reference/libraries/)
 - [Processing Video Lib](http://processing.org/reference/libraries/video/index.html)
+- [Processing TUIO Lib](http://prdownloads.sourceforge.net/reactivision/TUIO_Processing-1.4.zip?download)
 - [Camera Input Example](http://www.processing.org/reference/libraries/video/Capture.html)
 
 #### Computer Vision / Blob Detection
@@ -47,6 +48,13 @@ __Day 10 || Fr. 17.10 Foyer:__
 - [flob](http://s373.net/code/flob/): Alternative to OpenCV. For Processing and openFrameworks
 - [BlobDetection](http://www.v3ga.net/processing/BlobDetection/): Blob detection lib for Processing (Old. Last updated Oct. 2012)
 
+#### Software Communication Protocol
+
+- [TUIO](http://tuio.org/)
+
+#### Arduino Libs & Docs  
+
+- [oscuino](http://cnmat.berkeley.edu/oscuino)  
 
 ###Hardware:
 
