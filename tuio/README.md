@@ -42,4 +42,27 @@ Now run the Processing demo and point some IR at the camera. You should have som
 
 ### OSCulator & Ableton Live 
 
-You can use [osculator](http://www.osculator.net/) to transform OSC signals into e.g. Midi Notes to control other devices and software e.g. Ableton Live. This setup is tested but not fully documented.  
+You can use [osculator](http://www.osculator.net/) to transform OSC signals into e.g. Midi Notes to control other devices and software like Ableton Live.  
+
+#### Ableton Live Intro Midi Mapping Active
+![](live-intro-midi-mapping.png)  
+
+#### Ableton Live Intro Midi Settings for OSCulator
+
+![](ableton-live-intro-osculator-settings.png)  
+
+####OSCulator with TUIO signals
+
+![](osculator.png)
+
+- Download and install [OSCulator](http://www.osculator.net/) (nag-ware)  
+- Download and install [ableton live](https://www.ableton.com/en/trial/) (30 days trial)  
+- open ccv or reacTIVision
+- open OSCulator set the OSCulator port to 3333 and take a look at the incoming messages
+- set the x to MIDI CC, value 0, channel 1 (see the image)
+- set the x to MIDI CC, value 1, channel 2 (see the image)
+- open ableton live, setup some sounds and activate the [Midi mapping](https://www.ableton.com/en/articles/getting-started-3-setting-your-midi-controller/) (⌘ + m)
+__Hint:__ If you want the map x, y from the OSC separately shut of one of them in OSCulator, map it. Then shut of the other and map it. You can't map them together.  
+
+If your done play some tunes by moving an IRLed, a lighter or some bright light infront of your camera.  
+
