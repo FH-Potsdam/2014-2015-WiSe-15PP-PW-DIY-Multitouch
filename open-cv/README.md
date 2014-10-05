@@ -12,7 +12,9 @@ install for example like this:
 
 or download the last release version from [here](https://github.com/atduskgreg/opencv-processing/releases) and copy it in the Processing libraries folder.
 
-> __Note__: There are also other OpenCV implementations for Processing but I don't recommend them since they are old and have a trickier synthax.
+You also will need the excellent [controlP5](http://www.sojamo.de/libraries/controlP5/) library. Download and install that as well.  
+
+__Note by Jordi__: There are also other OpenCV implementations for Processing but I don't recommend them since they are old and have a trickier synthax.
 
 
 ##Filtering the image for blob detection
