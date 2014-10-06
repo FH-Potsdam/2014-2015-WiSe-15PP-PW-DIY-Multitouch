@@ -56,6 +56,14 @@ You should see something like this:
 
 ![](ImageProcessing/screenshots/touch_adaptive_threshold.png)
 
+## Color Tracking
+
+Simple color tracking based on the hue channel.
+
+Code: [HSVColorChannel.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/HSVColorTracking/HSVColorTracking.pde)
+
+![](HSVColorTracking/screenshots/hsv_color_tracking.png)
+
 ## Blob persistence (memory) over time
 
 For some applications it may be important to "follow" a blob or an object over time (as markers or TUIO do).
