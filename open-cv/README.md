@@ -4,6 +4,11 @@ Computer Vision with OpenCV
 
 Here we are basically doing the same than with the [bare bones examples](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/blob/master/bare-bones-cv) but using an external library for the computer vision operations (image filtering): the [OpenCV library for Processing](https://github.com/atduskgreg/opencv-processing) (by Greg Borenstein).
 
+##Computer Vision: introduction
+> _Computer Vision_ refers to a broad collection of techniques that allow computers to make intelligent assertions about what's going on in digital images and video. Thanks to recent advances in affordable vision technologies (such as Kinect, IR webcams, and Leap Motion), and armed with a slew of powerful but simple heuristics (tricks!) for extracting useful information from images -- a large number of artists and designers have begun to explore the new possibilities for interaction made possible by cameras. (Kyle McDonald)
+
+Golan Levin has compiled some thoughts on the history of computer vision in his essay [Computer Vision for Artists and Designers](http://www.flong.com/texts/essays/essay_cvad/) and as part of his course [Interactive Art and Computational Design](http://golancourses.net/2013/lectures/lecture-02-25/).
+
 ##Install  
 
 Download the last release version from [here](https://github.com/atduskgreg/opencv-processing/releases) and copy it in the Processing libraries folder.
