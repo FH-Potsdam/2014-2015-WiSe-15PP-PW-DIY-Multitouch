@@ -1,27 +1,27 @@
 Ideation exercise
 =================
 
-Concepts generated using one random technology and three random parameters in 3 rounds (see the cards inside the [idea-generator](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Multitouch/tree/master/ideation/idea-generator) folder)
+12 concepts generated using 1 random technology and 3 random parameters in 3 rounds (see the cards inside the [idea-generator](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Multitouch/tree/master/ideation/idea-generator) folder)
 
 ## Round 1
 
-### Slim Jumber
-__Tech:__ Optical
-__Params:__ Size, Volume
+### #1 Slim Jumber
+__Tech:__ Optical <br />
+__Params:__ Size, Volume <br />
 __Concept:__ The higher you jumped, the higher the tone will be, the more points you'll get
 
 ![](images/2014-10-06-14.05.24.jpg)
 
-### Knocking
-__Tech:__ Acustical
-__Params:__ Proportion, Volume, Position
+### #2 Knocking
+__Tech:__ Acustical <br />
+__Params:__ Proportion, Volume, Position <br />
 __Concept:__ Detect position of knocks
 
 ![](images/2014-10-06-14.09.55.jpg) 
 
-### Gesture Drawing
-__Tech:__ Resistive
-__Params:__ Pressure Force, Size, Rotation
+### #3 Gesture Drawing
+__Tech:__ Resistive <br />
+__Params:__ Pressure Force, Size, Rotation <br />
 __Concept:__ 
 - Use pressure on displays
 - Use drawing gestures to perform rotations or other operations. 
@@ -29,9 +29,9 @@ __Concept:__
 
 ![](images/2014-10-06-14.14.24.jpg) 
 
-### TRAILS
-__Tech:__ Resistive
-__Params:__ 
+### #4 TRAILS
+__Tech:__ Resistive <br />
+__Params:__  <br />
 __Concept:__ 
 - City trails, night trails...
 - People sitting at bars
@@ -40,9 +40,9 @@ __Concept:__
 
 ## Round 2
 
-### Horrorcube
-__Tech:__ Capacitive
-__Params:__ Lightness, rotation, volume
+### #5 Horrorcube
+__Tech:__ Capacitive <br />
+__Params:__ Lightness, rotation, volume <br />
 __Concept:__ 
 - Music player: for example, a cube
 - Twist it over to change the music
@@ -50,9 +50,9 @@ __Concept:__
 
 ![](images/2014-10-06-14.31.55.jpg) 
 
-### Soundgraffiti
-__Tech:__ Acustical
-__Params:__ 
+### #6 Soundgraffiti
+__Tech:__ Acustical <br />
+__Params:__  <br />
 __Concept:__
 - Room
 - Microphones on everycorner
@@ -61,9 +61,9 @@ __Concept:__
 
 ![](images/2014-10-06-14.35.22.jpg) 
 
-### Dancemasters 3K
-__Tech:__ Optical
-__Params:__ 
+### #7 Dancemasters 3K
+__Tech:__ Optical <br />
+__Params:__  <br />
 __Concept:__
 - Large room with a projection in the floor
 - Music turns on and you see patterns
@@ -72,9 +72,9 @@ __Concept:__
 
 ![](images/2014-10-06-14.39.03.jpg) 
 
-### Kalleido-crowd
-__Tech:__ Capacity
-__Params:__ Blob number, color, pressure force
+### #8 Kalleido-crowd
+__Tech:__ Capacity <br />
+__Params:__ Blob number, color, pressure force <br />
 __Concept:__
 - Room of people, exhibition...
 - Color tracking (people clothes, etc)
@@ -84,11 +84,11 @@ __Concept:__
 
 ![](images/2014-10-06-14.43.41.jpg) 
 
-## Round 3
+## Concept 9: Round 3
 
 ### Living Instruments
-__Tech:__ Optical
-__Params:__ Volume, Proportion, speed of blobs
+__Tech:__ Optical <br />
+__Params:__ Volume, Proportion, speed of blobs <br />
 __Concept:__
 - When you enter a room, you become an instrument
 - You decide which instrument you want to be
@@ -96,9 +96,9 @@ __Concept:__
 
 ![](images/2014-10-06-15.19.08.jpg) 
 
-### Modular Sound Creator
-__Tech:__ Optical
-__Params:__ Patterns, Lightness and blob number
+### #10 Modular Sound Creator
+__Tech:__ Optical <br />
+__Params:__ Patterns, Lightness and blob number <br />
 __Concept:__
 - Create sounds with patterns, predefined shapes
 - Objects can be connected
@@ -107,9 +107,9 @@ __Concept:__
 
 ![](images/2014-10-06-15.24.29.jpg) 
 
-### Puzzlecoaster
-__Tech:__ Capactive
-__Params:__ 
+### #11 Puzzlecoaster
+__Tech:__ Capactive <br />
+__Params:__  <br />
 __Concept:__
 - 2 parts: interactive and non-interactive
 - Interactive: Rollercoaster game
@@ -119,9 +119,9 @@ __Concept:__
 
 ![](images/2014-10-06-15.28.47.jpg) 
 
-### Fingerpainter
-__Tech:__ Resistive
-__Params:__ Size, proportion and color
+### #12 Fingerpainter
+__Tech:__ Resistive <br />
+__Params:__ Size, proportion and color <br />
 __Concept:__
 - Canvas where you can paint with your fingers, but you can paint the walls where your installation is.
 - With gestures you can adjust the drawing to fit the installation
@@ -133,6 +133,6 @@ __Concept:__
 Any other ideas? :)
 
 ### Idea title
-__Tech:__ Which tech do you use?
-__Params:__ Which parameters?
+__Tech:__ Which tech do you use? <br />
+__Params:__ Which parameters? <br />
 __Concept:__
