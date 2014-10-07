@@ -17,20 +17,20 @@ Based [on this](http://arduino.cc/en/Tutorial/Knock) and [that](http://www.ardui
 - Upload the sketch [knock.ino](arduino/knock/knock.ino) to your board and knock on the piezo or the table.  
 __Hint:__
 
-The result is better if the table or plate the piezo is sensing has the possibility to swing. A hard table that does not swing needs harder knocks.  
+The result is better if the table or plate that the piezo is sensing has the possibility to swing. A hard table that does not swing needs harder knocks.  
 Adjust the reading by reducing or incresing the resistor value. You could also use a potentiometer (variable resistor) instead.  
 
 ####Using Olimexino  
 
 ![](olimexino-85s/knock_hookup.jpg)
-To keep the costs low and or if you are in the need of even more microcontrollers you can use the olimexino. It is a low cost miniatur board. The hookup is the same as for the arduino. See the image and use the sketch [knock_olimexino_85s.ino](olimexino-85s/knock_olimexino_85s/knock_olimexino_85s.ino)  
+To keep the costs low and or if you are in the need of even more microcontrollers you can use the olimexino. It is a low-cost miniature board. The hookup is the same as for the arduino. See the image and use the sketch [knock_olimexino_85s.ino](olimexino-85s/knock_olimexino_85s/knock_olimexino_85s.ino)  
 
 
-##Capacitiv Detection  
+##Capacitive Detection  
 
-###Capacitiv Digital  
+###Capacitive Digital  
 
-Based on [instructables.com Turn a pencil drawing into a capacitiv sensor](http://www.instructables.com/id/Turn-a-pencil-drawing-into-a-capacitive-sensor-for/?ALLSTEPS)  
+Based on [instructables.com Turn a pencil drawing into a capacitive sensor](http://www.instructables.com/id/Turn-a-pencil-drawing-into-a-capacitive-sensor-for/?ALLSTEPS)  
 
 ![](fritzing/capacitive_digital_bb.png)  
 
@@ -44,7 +44,7 @@ In this sketch we use a LED on pin 12. Protect that LED with an 220Ohm resistor.
 
 
 
-###Capacitiv Touchless (Proximity) Detection  
+###Capacitive Touchless (Proximity) Detection  
 Based on [CapacitiveSensor playground.arduino.cc](http://playground.arduino.cc/Main/CapacitiveSensor?from=Main.CapSense)  
 
 ![](fritzing/CapacitivSensor_bb.png)  
