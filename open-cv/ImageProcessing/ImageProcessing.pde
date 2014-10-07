@@ -111,11 +111,23 @@ void draw() {
   // Save snapshot for display
   contoursImage = opencv.getSnapshot();
   
-  // Draw
+  // Display images
   displayImages();
-  //displayContours();
-  displayContoursBoundingBoxes();
+    
+  // Display contours in the lower right window
+  pushMatrix();
+    scale(0.5);
+    translate(src.width, src.height);
+  
+    displayContours();
+    displayContoursBoundingBoxes();
+      
+  popMatrix();
 }
+
+///////////////////////
+// Display Functions
+///////////////////////
 
 void displayImages() {
   
@@ -136,15 +148,7 @@ void displayImages() {
 }
 
 void displayContours() {
-    
-  pushMatrix();
-  scale(0.5);
-  translate(width, height);
   
-  noFill();
-  strokeWeight(3);
-  
-  // Contours
   for (int i=0; i<contours.size(); i++) {
   
     Contour contour = contours.get(i);
@@ -154,17 +158,9 @@ void displayContours() {
     strokeWeight(3);
     contour.draw();
   }
-  popMatrix();
 }
 
 void displayContoursBoundingBoxes() {
-  
-  pushMatrix();
-  scale(0.5);
-  translate(width, height);
-  
-  noFill();
-  strokeWeight(3);
   
   for (int i=0; i<contours.size(); i++) {
     
@@ -180,7 +176,6 @@ void displayContoursBoundingBoxes() {
     strokeWeight(2);
     rect(r.x, r.y, r.width, r.height);
   }
-  popMatrix();
 }
 
 

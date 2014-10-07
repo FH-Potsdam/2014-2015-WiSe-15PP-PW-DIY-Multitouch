@@ -83,6 +83,14 @@ Code:
 - [WhichFace.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/WhichFace/WhichFace.pde): main sketch
 - [Face.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/WhichFace/Face.pde): the Face class
 
+The same algorithm is also implemented in the `ImageFilteringWithBlobPersistence` example to track the blobs over time:
+
+![](ImageFilteringWithBlobPersistence/screenshots/blob_persistence.png)
+
+Code:
+- [ImageFilteringWithBlobPersistence.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/ImageFilteringWithBlobPersistence/ImageFilteringWithBlobPersistence.pde): main sketch
+- [Blob.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/ImageFilteringWithBlobPersistence/Blob.pde): the Blob class
+
 To see a detailed information of this algorithm visit Daniel Shiffman's blog:
 http://shiffman.net/2011/04/26/opencv-matching-faces-over-time/
 

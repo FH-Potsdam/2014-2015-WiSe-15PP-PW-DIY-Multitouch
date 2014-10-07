@@ -19,7 +19,18 @@ import controlP5.*;
 OpenCV opencv;
 Capture video;
 PImage src, preProcessedImage, processedImage, contoursImage;
+
 ArrayList<Contour> contours;
+
+// List of detected blobs (every frame)
+Rectangle[] blobs;
+
+// List of my blob objects (persistent)
+ArrayList<Blob> blobList;
+
+
+// Number of blobs detected over all time. Used to set IDs.
+int blobCount = 0;
 
 float contrast = 1.35;
 int brightness = 0;
@@ -38,12 +49,15 @@ int buttonBgColor;
 void setup() {
   frameRate(15);
   
-  video = new Capture(this, 640, 480);
-  //video = new Capture(this, 640, 480, "USB2.0 PC CAMERA");
+  //video = new Capture(this, 640, 480);
+  video = new Capture(this, 640, 480, "USB2.0 PC CAMERA");
   video.start();
   
   opencv = new OpenCV(this, 640, 480);
   contours = new ArrayList<Contour>();
+  
+  // Blobs list
+  blobList = new ArrayList<Blob>();
   
   size(opencv.width + 200, opencv.height, P2D);
   
@@ -118,8 +132,9 @@ void draw() {
   // <3> FIND CONTOURS  
   ///////////////////////////////
   
+  detectBlobs();
   // Passing 'true' sorts them by descending area.
-  contours = opencv.findContours(true, true);
+  //contours = opencv.findContours(true, true);
   
   // Save snapshot for display
   contoursImage = opencv.getSnapshot();
@@ -137,18 +152,22 @@ void draw() {
     pushMatrix();
       scale(0.5);
       translate(src.width, src.height);
-  
+      
+      // Contours
       displayContours();
-      displayContoursBoundingBoxes();
+      //displayContoursBoundingBoxes();
+      
+      // Blobs
+      displayBlobs();
       
     popMatrix(); 
     
   popMatrix();
 }
 
-/////////////////////
-// Display Methods
-/////////////////////
+///////////////////////
+// Display Functions
+///////////////////////
 
 void displayImages() {
   
@@ -162,14 +181,24 @@ void displayImages() {
   
   stroke(255);
   fill(255);
+  textSize(12);
   text("Source", 10, 25); 
   text("Pre-processed Image", src.width/2 + 10, 25); 
   text("Processed Image", 10, src.height/2 + 25); 
   text("Tracked Points", src.width/2 + 10, src.height/2 + 25);
 }
 
+void displayBlobs() {
+  
+  for (Blob b : blobList) {
+    strokeWeight(1);
+    b.display();
+  }
+}
+
 void displayContours() {
- 
+  
+  // Contours
   for (int i=0; i<contours.size(); i++) {
   
     Contour contour = contours.get(i);
@@ -197,6 +226,128 @@ void displayContoursBoundingBoxes() {
     strokeWeight(2);
     rect(r.x, r.y, r.width, r.height);
   }
+}
+
+////////////////////
+// Blob Detection
+////////////////////
+
+void detectBlobs() {
+  
+  // Contours detected in this frame
+  // Passing 'true' sorts them by descending area.
+  contours = opencv.findContours(true, true);
+  
+  blobs = getBlobsFromContours(contours);
+  
+  //println(contours.length);
+  
+  // Check if the detected blobs already exist are new or some has disappeared. 
+  
+  // SCENARIO 1 
+  // blobList is empty
+  if (blobList.isEmpty()) {
+    // Just make a Blob object for every face Rectangle
+    for (int i = 0; i < blobs.length; i++) {
+      println("+++ New blob detected with ID: " + blobCount);
+      blobList.add(new Blob(blobCount, blobs[i].x, blobs[i].y, blobs[i].width, blobs[i].height));
+      blobCount++;
+    }
+  
+  // SCENARIO 2 
+  // We have fewer Blob objects than face Rectangles found from OpenCV in this frame
+  } else if (blobList.size() <= blobs.length) {
+    boolean[] used = new boolean[blobs.length];
+    // Match existing Blob objects with a Rectangle
+    for (Blob b : blobList) {
+       // Find blobs[index] that is closest to blob b
+       // set used[index] to true so that it can't be used twice
+       float record = 50000;
+       int index = -1;
+       for (int i = 0; i < blobs.length; i++) {
+         float d = dist(blobs[i].x, blobs[i].y, b.r.x, b.r.y);
+         if (d < record && !used[i]) {
+           record = d;
+           index = i;
+         } 
+       }
+       // Update Blob object location
+       used[index] = true;
+       b.update(blobs[index]);
+    }
+    // Add any unused blobs
+    for (int i = 0; i < blobs.length; i++) {
+      if (!used[i]) {
+        println("+++ New blob detected with ID: " + blobCount);
+        blobList.add(new Blob(blobCount, blobs[i].x, blobs[i].y, blobs[i].width, blobs[i].height));
+        blobCount++;
+      }
+    }
+  
+  // SCENARIO 3 
+  // We have more Blob objects than blob Rectangles found from OpenCV in this frame
+  } else {
+    // All Blob objects start out as available
+    for (Blob b : blobList) {
+      b.available = true;
+    } 
+    // Match Rectangle with a Blob object
+    for (int i = 0; i < blobs.length; i++) {
+      // Find blob object closest to blobs[i] Rectangle
+      // set available to false
+       float record = 50000;
+       int index = -1;
+       for (int j = 0; j < blobList.size(); j++) {
+         Blob f = blobList.get(j);
+         float d = dist(blobs[i].x, blobs[i].y, f.r.x, f.r.y);
+         if (d < record && f.available) {
+           record = d;
+           index = j;
+         } 
+       }
+       // Update Blob object location
+       Blob b = blobList.get(index);
+       b.available = false;
+       b.update(blobs[i]);
+    } 
+    // Start to kill any left over Blob objects
+    for (Blob b : blobList) {
+      if (b.available) {
+        b.countDown();
+        if (b.dead()) {
+          b.delete = true;
+        } 
+      }
+    } 
+  }
+  
+  // Delete any blob that should be deleted
+  for (int i = blobList.size()-1; i >= 0; i--) {
+    Blob b = blobList.get(i);
+    if (b.delete) {
+      blobList.remove(i);
+    } 
+  }
+}
+
+Rectangle[] getBlobsFromContours(ArrayList<Contour> newContours) {
+  
+  ArrayList<Rectangle> newBlobs = new ArrayList<Rectangle>();
+  
+  // Which of these contours are blobs?
+  for (int i=0; i<newContours.size(); i++) {
+    
+    Contour contour = newContours.get(i);
+    Rectangle r = contour.getBoundingBox();
+    
+    if (//(contour.area() > 0.9 * src.width * src.height) ||
+        (r.width < blobSizeThreshold || r.height < blobSizeThreshold))
+      continue;
+    
+    newBlobs.add(r);
+  }
+  
+  return newBlobs.toArray(new Rectangle[newBlobs.size()]);
 }
 
 //////////////////////////
