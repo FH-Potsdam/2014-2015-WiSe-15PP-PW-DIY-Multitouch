@@ -71,9 +71,9 @@ Code: [HSVColorChannel.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW
 
 For a multiple color tracking, check this sketch:
 
-Code: [MultipleColorChannel.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/MultipleColorChannel/MultipleColorChannel.pde)
+Code: [MultipleColorChannel.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/MultipleColorTracking/MultipleColorTracking.pde)
 
-![](MultipleColorChannel/screenshots/multiple_color_tracking.png)
+![](MultipleColorTracking/screenshots/multiple_color_tracking.png)
 
 ## Blob persistence (memory) over time
 
