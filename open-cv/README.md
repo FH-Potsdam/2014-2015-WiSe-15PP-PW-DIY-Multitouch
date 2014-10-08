@@ -65,13 +65,13 @@ You should see something like this:
 
 Simple color tracking based on the hue channel.
 
-Code: [HSVColorChannel.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/HSVColorTracking/HSVColorTracking.pde)
+Code: [HSVColorTracking.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/HSVColorTracking/HSVColorTracking.pde)
 
 ![](HSVColorTracking/screenshots/hsv_color_tracking.png)
 
 For a multiple color tracking, check this sketch:
 
-Code: [MultipleColorChannel.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/MultipleColorTracking/MultipleColorTracking.pde)
+Code: [MultipleColorTracking.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/MultipleColorTracking/MultipleColorTracking.pde)
 
 ![](MultipleColorTracking/screenshots/multiple_color_tracking.png)
 
