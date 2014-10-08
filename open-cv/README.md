@@ -69,6 +69,12 @@ Code: [HSVColorChannel.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW
 
 ![](HSVColorTracking/screenshots/hsv_color_tracking.png)
 
+For a multiple color tracking, check this sketch:
+
+Code: [MultipleColorChannel.pde](https://github.com/FH-Potsdam/2014-2015-WiSe-15PP-PW-DIY-Moultitouch/tree/master/open-cv/MultipleColorChannel/MultipleColorChannel.pde)
+
+![](MultipleColorChannel/screenshots/multiple_color_tracking.png)
+
 ## Blob persistence (memory) over time
 
 For some applications it may be important to "follow" a blob or an object over time (as markers or TUIO do).
