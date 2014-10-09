@@ -5,4 +5,21 @@ application.linux64
 application.windows32
 application.windows64
 application.macosx
-*.app*
+
+#########################
+# openFrameworks
+#########################
+
+[Bb]uild/
+[Oo]bj/
+*.o
+[Dd]ebug*/
+[Rr]elease*/
+*.mode*
+*.app/
+*.pyc
+.svn/
+*.log
+*.cpp.eep
+*.cpp.elf
+*.cpp.hex
