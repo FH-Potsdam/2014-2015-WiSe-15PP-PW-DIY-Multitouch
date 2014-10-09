@@ -100,6 +100,8 @@ void draw() {
   } else {
     text("press key [1-4] to select color", 10, 25);
   }
+  
+  displayContoursBoundingBoxes();
 }
 
 //////////////////////
@@ -138,6 +140,32 @@ void detectColors() {
     // <7> Find contours in our range image.
     //     Passing 'true' sorts them by descending area.
     //contours = opencv.findContours(true,true);
+  }
+  
+  if (outputs[0] != null) {
+    
+    println("hey");
+    opencv.loadImage(outputs[0]);
+    contours = opencv.findContours(true,true);
+  }
+}
+
+void displayContoursBoundingBoxes() {
+  
+  println("display");
+  for (int i=0; i<contours.size(); i++) {
+    
+    Contour contour = contours.get(i);
+    Rectangle r = contour.getBoundingBox();
+    
+    if (//(contour.area() > 0.9 * src.width * src.height) ||
+        (r.width < 20 || r.height < 20))
+      continue;
+    
+    stroke(255, 0, 0);
+    fill(255, 0, 0, 150);
+    strokeWeight(2);
+    rect(r.x, r.y, r.width, r.height);
   }
 }
 
