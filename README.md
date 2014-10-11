@@ -71,7 +71,6 @@ Source: [http://www.peauproductions.com/cameras.html](http://www.peauproductions
 We expirenced some issues using the PSEye3 camera with Processing under Mac OSX. Mountain Lion seems not to work at all.  
 - To use the camera with Mac OSX 10.9.4 you need to use Processing 1.5.1 or 2.0.3 which you can [download here](https://code.google.com/p/processing/downloads/list).  
 - Install [Mac OSX: macam driver](http://webcam-osx.sourceforge.net/)  
-
 - and a [hacky solution](http://forum.processing.org/one/topic/ps3-eyecam-under-osx-10-8.html) for Mountain Lion (did not work yet).  
 - [Windows driver](http://codelaboratories.com/products/eye/driver/)
 
@@ -129,8 +128,8 @@ Links for things.
 
 ####Misc
 - [Jordi Tost "Augmented Multitouch" Pinboard](http://www.pinterest.com/jorditost/augmented-multitouch/)
-
-
+- [Fabian "fabiantheblind" Morón Zirfas Pinbord || Query {touch} ](https://pinboard.in/search/u:fabiantheblind?query=touch)  
+- [Fabian "fabiantheblind" Morón Zirfas Pinbord || Query {multitouch} ](https://pinboard.in/search/u:fabiantheblind?query=multitouch)  
 ####License
 
 The code in this repository is available under the MIT License:
